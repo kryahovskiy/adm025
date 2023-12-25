@@ -1,0 +1,16 @@
+---
+- name: Setup Docker and Tools
+  hosts: default
+  become: true
+
+  tasks:
+  - name: Install Docker
+    apt:
+      name: docker.io
+      state: present
+
+  - name: Install Docker-compose
+    apt:
+      name: docker-compose
+      state: present
+
